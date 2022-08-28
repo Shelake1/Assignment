@@ -21,7 +21,6 @@ export default class AssignmentLwc extends NavigationMixin(LightningElement) {
     {label:'Contact Name', fieldName :'Name'},
     {label: 'Phone', fieldName: 'Phone'},
     {label:'Email',fieldName:'Email'},
-    {label :'Department' ,fieldName:'Department'},
     {
         type: 'action',
      typeAttributes: {
