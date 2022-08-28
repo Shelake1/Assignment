@@ -1,0 +1,40 @@
+<template>
+
+    <lightning-card >
+        <div class="slds-m-around_small">
+            <label>
+                <strong>
+                Account Name
+            </strong>
+            </label>
+        <lightning-combobox 
+
+                    value={value}
+
+                    placeholder="Select Account"
+                    options={options}
+                    onchange={handleChangeValue}
+                    > 
+                </lightning-combobox>
+                </div>
+                <br>
+                <div class="slds-clearfix slds-m-around_small slds-box slds-box_xx-small">
+                    <h1 class="slds-p-bottom_medium"><lightning-button label="New" class="slds-float_right" onclick={newbuttonclick}></lightning-button></h1>
+                </div>
+    </lightning-card>
+    <template if:true={cardVisible}>
+        <lightning-card title="Related Account Contacts">
+            <div style="height: 200px;">
+        <lightning-datatable key-field="id"
+                              data={data}
+                              columns={column}
+                              onrowaction={actionHandle}>
+        </lightning-datatable>
+    </div>
+
+
+        </lightning-card>
+
+    </template>
+    
+</template>
